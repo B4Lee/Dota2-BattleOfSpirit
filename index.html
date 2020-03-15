@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dota 2 Minigame</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Cantarell|Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel='icon' href='favicon.png' type='favicon'>
+
+</head>
+<body>
+    <h1 class="text-center main-title">Choose your Heroes!</h1>
+    <div class="main">
+        <div class="container interface">
+            <a href="#" class="character col-md-4 text-center" onclick="GameManager.setGameStart('Ember Spirit')">
+                <h3 class="char-class">Ember Spirit</h3>
+                <img src="img/avatar-player/Ember Spirit.png" alt="Ember Spirit">            
+            </a>
+            <a href="#" class="character col-md-4 text-center" onclick="GameManager.setGameStart('Earth Spirit')">
+                <h3 class="char-class">Earth Spirit</h3>
+                <img class="text-center" src="img/avatar-player/Earth Spirit.png" alt="Earth Spirit">
+            </a>
+            <a href="#" class="character col-md-4 text-center" onclick="GameManager.setGameStart('Storm Spirit')">
+                <h3 class="char-class">Storm Spirit</h3>
+                <img class="text-center" src="img/avatar-player/Storm Spirit.png" alt="Storm Spirit">
+            </a>
+        </div>
+        <div class="container-fluid arena"></div>
+        <!-- <audio autoplay>
+            <source src="respawn-dota.mp3" type="audio/mpeg">
+          </audio>            -->
+    </div>
+    <script src="js/math.js"></script>
+    <script src="js/Entity.js"></script>
+    <script src="js/GameManager.js"></script>
+    <script src="js/Fight.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/** GENERAL **/
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #10101b;
+    background-image: url(../img/images/fountain.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    height: 150px;
+    line-height: 150px;
+    font-family: 'Baloo Bhaina', cursive;
+    margin-bottom: 50px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/** INTERFACE **/
+
+.character {
+    margin: auto 2px;
+    border: 2px solid #10101B;
+}
+
+.character:hover {
+    border: 2px solid rgba(255, 255, 255, 0.575);
+}
+
+.character:hover {
+    text-decoration: none;
+}
+
+.character:nth-child(1) {
+    background: rgb(88, 43, 21);
+    background: linear-gradient(180deg, rgb(80, 30, 21) 28%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);
+}
+
+.character:nth-child(2) {
+    background: rgb(17, 71, 16);
+    background: linear-gradient(180deg, rgba(17, 71, 16, 1) 28%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);
+}
+
+.character:nth-child(3) {
+    background: rgb(36, 40, 255);
+    background: linear-gradient(180deg, rgb(32, 61, 158) 28%, rgba(0, 0, 0, 1) 67%, rgba(0, 0, 0, 1) 100%);
+}
+
+.character h3 {
+    font-family: 'Cantarell', sans-serif;
+    padding-top: 25px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.interface {
+    display: flex;
+    justify-content: space-around;
+}
+
+.interface img {
+    width: 200px;
+    padding: 50px 0;
+}
+
+/** ARENA **/
+
+.arena {
+    display: none;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.arena img {
+    width: 250px;
+}
+
+.arena ul {
+    list-style-type: none;
+}
+
+.hide {
+    display: none;
+    transition: all 0.5s;
+}
+
+.selected-character {
+    max-width: 500px;
+    height: 520px;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+}
+
+.enemy-area {
+    height: 520px;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+.selected-character h3,
+.enemy-area h3 {
+    color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.selected-character ul,
+.enemy-area ul {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.selected-character .stat,
+.enemy-area .stat {
+    padding-left: 10px;
+    color: #a83535;
+}
+
+.find-enemy-btn,
+.attack-btn {
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+.life-container {
+    margin-bottom: 35px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.life-percent-c {
+    width: 100%;
+    height: 25px;
+    background: rgb(240, 23, 23);
+    background: radial-gradient(circle, rgba(240, 23, 23, 1) 0%, rgba(144, 1, 1, 1) 55%, rgba(16, 16, 27, 1) 100%);
+
+}
+
+.life-percent-e {
+    width: 100%;
+    height: 25px;
+    background: rgb(240, 23, 23);
+    background: radial-gradient(circle, rgba(240, 23, 23, 1) 0%, rgba(144, 1, 1, 1) 55%, rgba(16, 16, 27, 1) 100%);
+
+}
+
+
+/** RESTART **/
+
+.restart-btn {
+    height: 100px;
+    width: 250px;
+    margin-top: 230px;
+}
