@@ -6,8 +6,9 @@ const mainTitle = document.querySelector('.main-title');
 const player = Object.create(Entity);
 const enemy = Object.create(Entity);
 
-const GameManager = {
 
+const GameManager = {
+    
     arenaInterface: function() {
         interface.classList.add('hide');
     },
@@ -36,24 +37,13 @@ const GameManager = {
         const selectedCharacter = document.createElement('div');
         mainTitle.textContent = 'Ready to battle?';
         selectedCharacter.classList.add('container','col-lg-6', 'col-md-8', 'selected-character');
-        selectedCharacter.innerHTML = `<h3 class="text-center">${result}</h3>
-                                    <div class="life-container">                            
-                                    <div class="life-percent-c"=></div>
-                                    </div>
-                                    <div class="d-flex pb-5">
-                                        <img src='./img/avatar-player/${result}.png'/>
-                                        <ul class="col-md-6">
-                                            <li>Health:<span class="stat">${player.health}</span></li>
-                                            <li>Dodge:<span class="stat">${player.dodge}</span></li>
-                                            <li>Attack:<span class="stat">${player.attack}</span></li>
-                                            <li>Defense:<span class="stat">${player.defense}</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="text-center">
-                                    <button class="btn btn-danger find-enemy-btn" 
-                                        onclick="GameManager.searchEnemy()">Find an opponent
-                                    </button>
-                                    </div>`;
+        selectedCharacter.innerHTML = '<h3 class="text-center">' + result + '</h3><div class="life-container"><div class="life-percent-c"=></div></div><div class="d-flex pb-5"><img src="img/avatar-player/'
+        + result + '.png" class="img-avatar"><ul class="col-md-6"><li>Health:<span class="stat">'
+        + player.health + '</span></li><li>Dodge:<span class="stat"> ' 
+        + player.dodge + '</span></li><li>Attack:<span class="stat">' 
+        + player.attack + '</span></li><li>Defense:<span class="stat">' 
+        + player.defense+ '</span></li></ul></div><div class="text-center"><button class="btn btn-danger find-enemy-btn"onClick="GameManager.searchEnemy()">Find an opponent</button></div>';
+                                  
         arenaDiv.appendChild(selectedCharacter);
         GameManager.arenaInterface();
     },
@@ -100,7 +90,6 @@ const GameManager = {
     }
     
 } 
-
 
 
 

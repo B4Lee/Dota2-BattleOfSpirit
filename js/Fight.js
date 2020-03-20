@@ -1,17 +1,16 @@
-
 const Fight = {
-    startAttack: function () {
+    startAttack: function () {  
         const randomE = getRandomInt(100);
         console.log("Dodge Enemy", randomE);
         const randomP = getRandomInt(100);
         console.log("Dodge Player", randomP);
         if (player.dodge < randomE) {
             Fight.enemyAttack();
-            console.log("Dodge Player NO", player.dodge, "Player Life", player.health);     
+            console.log("Player Life " + player.health);     
         }
         if (enemy.dodge < randomP) {
             Fight.playerAttack();
-            console.log("Dodge Enemy NO", enemy.dodge, "Enemy Life", enemy.health);
+            console.log("Enemy Life " + enemy.health);
         }
     },
 
