@@ -25,13 +25,13 @@ const GameManager = {
         const result = heroName;
         switch (heroName) {
             case "Ember Spirit":
-                player.init(heroName, 1250, 35, 150, 20);
+                player.init(heroName, 2120, 35, 150, 14);
                 break;
             case "Earth Spirit":
-                player.init(heroName, 1000, 60, 200, 5);
+                player.init(heroName, 3160, 60, 200, 13);
                 break;
             case "Storm Spirit":
-                player.init(heroName, 750, 20, 250, 0);
+                player.init(heroName, 1780, 20, 250, 12);
                 break;
         }
         const selectedCharacter = document.createElement('div');
@@ -41,8 +41,8 @@ const GameManager = {
         + result + '.png" class="img-avatar"><ul class="col-md-6"><li>Health:<span class="stat">'
         + player.health + '</span></li><li>Dodge:<span class="stat"> ' 
         + player.dodge + '</span></li><li>Attack:<span class="stat">' 
-        + player.attack + '</span></li><li>Defense:<span class="stat">' 
-        + player.defense+ '</span></li></ul></div><div class="text-center"><button class="btn btn-danger find-enemy-btn"onClick="GameManager.searchEnemy()">Find an opponent</button></div>';
+        + player.attack + '</span></li><li>Armor:<span class="stat">' 
+        + player.armor + '</span></li></ul></div><div class="text-center"><button class="btn btn-danger find-enemy-btn"onClick="GameManager.searchEnemy()">Find an opponent</button></div>';
                                   
         arenaDiv.appendChild(selectedCharacter);
         GameManager.arenaInterface();
@@ -52,13 +52,13 @@ const GameManager = {
         const randomEnemy = Math.floor(Math.random() * Math.floor(3));
         switch (randomEnemy) {
             case 0:
-                enemy.init("Spirit Breaker", 800, 40, 150, 15);
+                enemy.init("Spirit Breaker", 2560, 40, 150, 12);
                 break;
             case 1:
-                enemy.init("Void Spirit", 1200, 25, 100, 35);
+                enemy.init("Void Spirit", 2140, 25, 100, 12);
                 break;
             case 2:
-                enemy.init("Vengeful Spirit", 1100, 55, 130, 15);
+                enemy.init("Vengeful Spirit", 1960, 55, 130, 20);
                 break;
             }
         const enemyArea = document.createElement('div');
@@ -73,7 +73,7 @@ const GameManager = {
                                     <li>Health:<span class="stat">${enemy.health}</span></li>
                                     <li>Dodge:<span class="stat">${enemy.dodge}</span></li>
                                     <li>Attack:<span class="stat">${enemy.attack}</span></li>
-                                    <li>Defense:<span class="stat">${enemy.defense}</span></li>
+                                    <li>Armor:<span class="stat">${enemy.armor}</span></li>
                                 </ul>                                 
                                 </div>`;
         arenaDiv.appendChild(enemyArea);

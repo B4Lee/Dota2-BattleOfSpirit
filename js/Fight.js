@@ -6,24 +6,24 @@ const Fight = {
         console.log("Dodge Player", randomP);
         if (player.dodge < randomE) {
             Fight.enemyAttack();
-            console.log("Player Life " + player.health);     
+            console.log( "" + player.heroName + " Life " + player.health);     
         }
         if (enemy.dodge < randomP) {
             Fight.playerAttack();
-            console.log("Enemy Life " + enemy.health);
+            console.log( "" + enemy.heroName + " Life " + enemy.health);
         }
     },
 
     enemyAttack: function () {
         const playerLifeBar = document.querySelector('.life-percent-c');
-        const playerCurrentHealth = ((player.health + player.defense) - enemy.attack);
+        const playerCurrentHealth = ((player.health + player.armor) - enemy.attack);
         let pMaxHealth;
         if (player.heroName === "Ember Spirit") {
-            pMaxHealth = 1200;
+            pMaxHealth = 2120;
         } else if (player.heroName === "Earth Spirit") {
-            pMaxHealth = 1000;
+            pMaxHealth = 3160;
         } else if (player.heroName === "Storm Spirit") {
-            pMaxHealth = 750;
+            pMaxHealth = 1780;
         }
         const playerLifeBarP = (100 * playerCurrentHealth) / pMaxHealth;
         playerLifeBar.style.width = playerLifeBarP + '%';        
@@ -38,15 +38,14 @@ const Fight = {
 
     playerAttack: function() {
         const enemyLifeBar = document.querySelector('.life-percent-e');
-        const enemyCurrentHealth = ((enemy.health + enemy.defense) - player.attack);
+        const enemyCurrentHealth = ((enemy.health + enemy.armor) - player.attack);
         let eMaxHealth;
         if (enemy.heroName === "Spirit Breaker") {
-            eMaxHealth = 800;
+            eMaxHealth = 2560;
         } else if (enemy.heroName === "Void Spirit") {
-            eMaxHealth = 1200;
-     
+            eMaxHealth = 2140;
         } else if (enemy.heroName === "Vengeful Spirit") {
-            eMaxHealth = 1100;
+            eMaxHealth = 1960;
         }
         const enemyLifeBarP = (100 * enemyCurrentHealth) / eMaxHealth;
         enemyLifeBar.style.width = enemyLifeBarP + '%';
@@ -54,7 +53,7 @@ const Fight = {
         const main = document.querySelector('.main');
         if (enemyCurrentHealth < 0) {
             arenaDiv.style.display = "none";
-            mainTitle.textContent = "You have won !";
+            mainTitle.textContent = "You won !";
             GameManager.restartGame();
         }
     }
