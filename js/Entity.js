@@ -1,9 +1,9 @@
 const Entity = {
-    init: function (heroName, health, dodge, attack, defense) {
+    init: function (heroName, health, dodge, attack, armor) {
         this.heroName = heroName;
         this.health = health;
         this.dodge = dodge;
         this.attack = attack;
-        this.defense = defense;
+        this.armor = armor;
     }
 }
