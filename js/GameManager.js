@@ -6,6 +6,15 @@ const mainTitle = document.querySelector('.main-title');
 const player = Object.create(Entity);
 const enemy = Object.create(Entity);
 
+const Entity = {
+    init: function (heroName, health, dodge, attack, armor) {
+        this.heroName = heroName;
+        this.health = health;
+        this.dodge = dodge;
+        this.attack = attack;
+        this.armor = armor;
+    }
+}
 
 const GameManager = {
     
@@ -15,10 +24,11 @@ const GameManager = {
 
     restartGame: function() {        
         const restartBtn = document.createElement('div');
-        const main = document.querySelector('.main');        
+        const main = document.querySelector('.main');
         main.appendChild(restartBtn);
         restartBtn.classList.add('container', 'text-center');
         restartBtn.innerHTML = `<button class="btn btn-success restart-btn"onClick="window.location.reload()">Restart</button>`;
+        new Audio('../js/youwin.mp3').play()
     },
 
     setGameStart: function(heroName) {
