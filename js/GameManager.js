@@ -6,16 +6,6 @@ const mainTitle = document.querySelector('.main-title');
 const player = Object.create(Entity);
 const enemy = Object.create(Entity);
 
-const Entity = {
-    init: function (heroName, health, dodge, attack, armor) {
-        this.heroName = heroName;
-        this.health = health;
-        this.dodge = dodge;
-        this.attack = attack;
-        this.armor = armor;
-    }
-}
-
 const GameManager = {
     
     arenaInterface: function() {
