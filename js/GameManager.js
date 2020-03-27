@@ -18,7 +18,6 @@ const GameManager = {
         main.appendChild(restartBtn);
         restartBtn.classList.add('container', 'text-center');
         restartBtn.innerHTML = `<button class="btn btn-success restart-btn"onClick="window.location.reload()">Restart</button>`;
-        new Audio('./js/youwin.mp3').play()
     },
 
     setGameStart: function(heroName) {
