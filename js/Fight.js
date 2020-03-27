@@ -55,6 +55,7 @@ const Fight = {
             arenaDiv.style.display = "none";
             mainTitle.textContent = "You won !";
             GameManager.restartGame();
+            new Audio('./js/youwin.mp3').play()
         }
     }
 }
