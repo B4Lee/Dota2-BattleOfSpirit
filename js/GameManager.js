@@ -6,7 +6,6 @@ const mainTitle = document.querySelector('.main-title');
 const player = Object.create(Entity);
 const enemy = Object.create(Entity);
 
-
 const GameManager = {
     
     arenaInterface: function() {
