@@ -4,13 +4,13 @@ const Fight = {
         console.log("Dodge Enemy", randomE);
         const randomP = getRandomInt(100);
         console.log("Dodge Player", randomP);
+        const currentPlayerlife =  document.getElementById("currentPlayerlife").innerHTML = "Health: " + player.health;
+        const currentEnemylife =  document.getElementById("currentEnemylife").innerHTML = "Health: " + enemy.health;
         if (player.dodge < randomE) {
             Fight.enemyAttack();
-            console.log( "" + player.heroName + " Life " + player.health);     
         }
         if (enemy.dodge < randomP) {
             Fight.playerAttack();
-            console.log( "" + enemy.heroName + " Life " + enemy.health);
         }
     },
 
@@ -50,7 +50,6 @@ const Fight = {
         const enemyLifeBarP = (100 * enemyCurrentHealth) / eMaxHealth;
         enemyLifeBar.style.width = enemyLifeBarP + '%';
         enemy.health = enemyCurrentHealth;        
-        const main = document.querySelector('.main');
         if (enemyCurrentHealth < 0) {
             arenaDiv.style.display = "none";
             mainTitle.textContent = "You won !";
