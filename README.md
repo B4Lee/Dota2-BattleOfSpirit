@@ -7,7 +7,7 @@ Turn Based Dota 2 Minigame made using HTML5, CSS, Bootstrap, JavaScript!
 1. Choose your Heroes!
 2. Find an Opponent 
 3. Attack the enemy ! (click attack button once, then you can press Enter afterwards)
-4. to see the remaining Spirit Life you can see `console.log` (press F12 on Chrome/Mozilla) 
+4. See the results
 5. Repeat!
 
 ### Contribute!
