@@ -37,7 +37,7 @@ const GameManager = {
         mainTitle.textContent = 'Ready to battle?';
         selectedCharacter.classList.add('container','col-lg-6', 'col-md-8', 'selected-character');
         selectedCharacter.innerHTML = '<h3 class="text-center">' + result + '</h3><div class="life-container"><div class="life-percent-c"=></div></div><div class="d-flex pb-5"><img src="img/avatar-player/'
-        + result + '.png" class="img-avatar"><ul class="col-md-6"><li>Health:<span class="stat">'
+        + result + '.gif" class="img-avatar"><ul class="col-md-6"><li id="currentPlayerlife">Health: '
         + player.health + '</span></li><li>Dodge:<span class="stat"> ' 
         + player.dodge + '</span></li><li>Attack:<span class="stat">' 
         + player.attack + '</span></li><li>Armor:<span class="stat">' 
@@ -69,7 +69,7 @@ const GameManager = {
                             <div class="d-flex">
                                 <img src="./img/avatar-enemies/${enemy.heroName}.png" />
                                 <ul class="col-md-6">
-                                    <li>Health:<span class="stat">${enemy.health}</span></li>
+                                    <li id="currentEnemylife">Health:<span class="stat">${enemy.health}</span></li>
                                     <li>Dodge:<span class="stat">${enemy.dodge}</span></li>
                                     <li>Attack:<span class="stat">${enemy.attack}</span></li>
                                     <li>Armor:<span class="stat">${enemy.armor}</span></li>
