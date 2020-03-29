@@ -34,14 +34,14 @@ const GameManager = {
                 break;
         }
         const selectedCharacter = document.createElement('div');
-        mainTitle.textContent = 'Ready to battle?';
+        mainTitle.textContent = 'Battle of Spirit ⚔ ';
         selectedCharacter.classList.add('container','col-lg-6', 'col-md-8', 'selected-character');
         selectedCharacter.innerHTML = '<h3 class="text-center">' + result + '</h3><div class="life-container"><div class="life-percent-c"=></div></div><div class="d-flex pb-5"><img src="img/avatar-player/'
         + result + '.gif" class="img-avatar"><ul class="col-md-6"><li id="currentPlayerlife">Health: '
-        + player.health + '</span></li><li>Dodge:<span class="stat"> ' 
-        + player.dodge + '</span></li><li>Attack:<span class="stat">' 
-        + player.attack + '</span></li><li>Armor:<span class="stat">' 
-        + player.armor + '</span></li></ul></div><div class="text-center"><button class="btn btn-danger find-enemy-btn"onClick="GameManager.searchEnemy()">Find an opponent</button></div>';
+        + player.health + '</li><li id="dmgBlockEnemy">Dodge: ' 
+        + player.dodge + '</li><li>Attack: ' 
+        + player.attack + '</li><li>Armor: ' 
+        + player.armor + '</li></ul></div><div class="text-center"><button class="btn btn-danger find-enemy-btn"onClick="GameManager.searchEnemy()">Find an opponent</button></div>';
                                   
         arenaDiv.appendChild(selectedCharacter);
         GameManager.arenaInterface();
@@ -67,12 +67,12 @@ const GameManager = {
                             <div class="life-percent-e"=></div>
                             </div> 
                             <div class="d-flex">
-                                <img src="./img/avatar-enemies/${enemy.heroName}.png" />
+                                <img src="./img/avatar-enemies/${enemy.heroName}.gif" />
                                 <ul class="col-md-6">
-                                    <li id="currentEnemylife">Health:<span class="stat">${enemy.health}</span></li>
-                                    <li>Dodge:<span class="stat">${enemy.dodge}</span></li>
-                                    <li>Attack:<span class="stat">${enemy.attack}</span></li>
-                                    <li>Armor:<span class="stat">${enemy.armor}</span></li>
+                                    <li id="currentEnemylife">Health: ${enemy.health}</li>
+                                    <li id="dmgBlockPlayer">Dodge: ${enemy.dodge}</li>
+                                    <li>Attack: ${enemy.attack}</li>
+                                    <li>Armor: ${enemy.armor}</li>
                                 </ul>                                 
                                 </div>`;
         arenaDiv.appendChild(enemyArea);
