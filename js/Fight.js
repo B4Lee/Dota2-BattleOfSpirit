@@ -1,8 +1,10 @@
 const Fight = {
     startAttack: function () {  
         const randomE = getRandomInt(100);
+        const dmgBlockEnemy =  document.getElementById("dmgBlockEnemy").innerHTML = enemy.heroName + " Dodge " + randomE;
         console.log("Dodge Enemy", randomE);
         const randomP = getRandomInt(100);
+        const dmgBlockPlayer =  document.getElementById("dmgBlockPlayer").innerHTML = player.heroName + " Dodge " + randomP;
         console.log("Dodge Player", randomP);
         const currentPlayerlife =  document.getElementById("currentPlayerlife").innerHTML = "Health: " + player.health;
         const currentEnemylife =  document.getElementById("currentEnemylife").innerHTML = "Health: " + enemy.health;
