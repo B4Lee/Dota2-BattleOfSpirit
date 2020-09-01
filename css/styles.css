@@ -19,6 +19,17 @@ h1 {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+
+
 /** INTERFACE **/
 
 .character {
