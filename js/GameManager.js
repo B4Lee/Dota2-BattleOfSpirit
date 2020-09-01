@@ -34,7 +34,7 @@ const GameManager = {
                 break;
         }
         const selectedCharacter = document.createElement('div');
-        mainTitle.textContent = 'Battle of Spirit ⚔ ';
+        mainTitle.textContent = 'Battle of Spirit ⚔️ ';
         selectedCharacter.classList.add('container','col-lg-6', 'col-md-8', 'selected-character');
         selectedCharacter.innerHTML = '<h3 class="text-center">' + result + '</h3><div class="life-container"><div class="life-percent-c"=></div></div><div class="d-flex pb-5"><img src="img/avatar-player/'
         + result + '.gif" class="img-avatar"><ul class="col-md-6"><li id="currentPlayerlife">Health: '
